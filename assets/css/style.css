@@ -11,11 +11,12 @@ body{
 .questions{
     background-color:white;
     text-align:center;
-    width:
+    width:75%;
+    height:25%;
 
 }
-p{
-    background-color:none;
+.quest{
+    background-color:pink;
 }
 
 .form-check{
