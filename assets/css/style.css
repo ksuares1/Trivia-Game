@@ -1,22 +1,26 @@
 body{
     background-image: url("../images/this-is-us.jpg");
     /* height:100%; */
-    
-}
+
+
+
 #game-name{
     background-color:white;
-    text-align:center;
+    text-align:center; 
+    width:25%;
+    height:85%;
 }
 
 .questions{
     background-color:white;
     text-align:center;
-    width:75%;
-    height:25%;
+    width:65%;
+    height:35%;
+    /* clear:both; */
 
 }
 .quest{
-    background-color:pink;
+    background-color:none;
 }
 
 .form-check{
