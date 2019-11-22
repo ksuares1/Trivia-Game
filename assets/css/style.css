@@ -11,6 +11,13 @@ body{
     height:85%; 
 } 
 
+/* #timer{
+} */
+#countdown{
+    background-color:white;
+    width:15%;
+    height:25%;
+}
 .questions{
     background-color:white;
     text-align:center;
