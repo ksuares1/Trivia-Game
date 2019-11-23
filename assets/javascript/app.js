@@ -1,8 +1,5 @@
 $(document).ready(function () {
 
-    //Since the players should not see the answers before they play, lets hide them first. 
-    ('.answers').hide();
-
     //the game will start at 60 seconds
     var number = 60;
     var intervalID;
@@ -11,10 +8,8 @@ $(document).ready(function () {
     var unanswered = 0;
 
     //Functions
-    function showQuestions() {
-        $("#countdown").show();
-        $(".questions").show();
-        $(".get-answers").show();
+    function showResults() {
+        $(".get-answers")
     }
 
     function countdownTimer() {
