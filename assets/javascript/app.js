@@ -9,7 +9,8 @@ $(document).ready(function () {
 
     //Functions
     function showResults() {
-        $(".get-answers")
+        $('.get-answers')
+        $('display-summary')
     }
 
     function countdownTimer() {
@@ -36,9 +37,9 @@ $(document).ready(function () {
             ('#get-answers').hide();
         }
     
-        // On click function for the start of the game
+        // When the player clicks the shubmit button, it activates the on click function. 
 
-            $('.game-start').on('click', function(){
+            $('.game-answers').on('click', function(){
 
             }
     
