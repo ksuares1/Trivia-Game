@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-    //set our number counter to 30
+    //the game will start at 30 seconds
     var number= 30;
 
 
