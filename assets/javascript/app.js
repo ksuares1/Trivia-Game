@@ -9,8 +9,8 @@ $(document).ready(function () {
 
     //Functions
     function showResults() {
-        $('.get-answers')
-        $('display-summary')
+        $('.get-answers').show();
+        $('display-summary').show();
     }
 
     function countdownTimer() {
@@ -29,18 +29,24 @@ $(document).ready(function () {
             hide();
             displaySummary();
         }
-        
+
         //Function to hide questions and timer, after questions are answered. 
-        function hide(){
-            ('#countdown').hide(); 
+        function hide() {
+            ('#countdown').hide();
             ('.questions').hide();
             ('#get-answers').hide();
         }
-    
+
         // When the player clicks the shubmit button, it activates the on click function. 
 
-            $('.game-answers').on('click', function(){
+        $('.game-answers').on('click', function () {
+            displaySummary();
+        });
 
-            }
-    
+        $('input[type=radio]').on('change', function () {
+            correctCount = $('input[value=correct]:checked').length;
+            wrongCount = $('input[value=wrong]:checked').length;
+            unanswered = (8 - (correctCount + wrongCount));
+        });
+
 });
