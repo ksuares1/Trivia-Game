@@ -10,7 +10,7 @@ $(document).ready(function () {
     //Functions
     function showResults() {
         $('.get-answers').show();
-        $('display-summary').show();
+        $('display-results').show();
     }
 
     function countdownTimer() {
@@ -47,6 +47,7 @@ $(document).ready(function () {
             correctCount = $('input[value=correct]:checked').length;
             wrongCount = $('input[value=wrong]:checked').length;
             unanswered = (8 - (correctCount + wrongCount));
-        });
+        }
+    
+    });
 
-});
