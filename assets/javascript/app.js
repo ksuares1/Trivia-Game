@@ -2,9 +2,10 @@ $(document).ready(function () {
 
     // when the game start: questions, the timer, and answers are hidden
 
-    $('.countdown').hide();
+    $('#countdown').hide();
     $('.quest').hide();
     $('.display-results').hide();
+    $('#timer').hide();
 
     //the game will start at 60 seconds
     var number = 60;
