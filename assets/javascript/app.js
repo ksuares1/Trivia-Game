@@ -16,7 +16,9 @@ $(document).ready(function () {
     function countdownTimer() {
         intervalId = setInterval(decrement, 1000);
     }
-
+    $('.form-check-input').on('click', function(){
+        console.log($(this))
+    })
     //Decrement function 
     function decrement() {
         number--;
@@ -42,12 +44,14 @@ $(document).ready(function () {
         $('.game-answers').on('click', function () {
             displaySummary();
         });
+       
 
         $('input[type=radio]').on('change', function () {
+            console.log("You won!")
             correctCount = $('input[value=correct]:checked').length;
             wrongCount = $('input[value=wrong]:checked').length;
             unanswered = (8 - (correctCount + wrongCount));
-        }
-    
-    });
+        })
+    };
+})
 
