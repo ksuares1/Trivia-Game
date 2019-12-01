@@ -56,7 +56,7 @@ $(document).ready(function () {
         function hide() {
             ('#countdown').hide();
             ('.questions').hide();
-            ('#get-answers').hide();
+            // ('#get-answers').hide();
         }
 
         // Function to display the results of the game
@@ -77,7 +77,7 @@ $(document).ready(function () {
         });
 
         // Done Button
-        $('.get-answers').on('click', function () {
+        $('#start-game').on('click', function () {
             $('#start-game').hide();
             hide();
             displayResults();
