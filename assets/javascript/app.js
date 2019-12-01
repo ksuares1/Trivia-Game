@@ -71,7 +71,7 @@ $(document).ready(function () {
 
         // Start Button on click 
         $('#start-game').on('click', function () {
-            $('.quest').show();
+            $('#start-game').();
             showGame();
             countdownTimer();
         });
