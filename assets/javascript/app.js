@@ -1,5 +1,11 @@
 $(document).ready(function () {
 
+    // when the game start: questions, the timer, and answers are hidden
+
+    $('.countdown').hide();
+    $('.quest').hide();
+    $('.display-results').hide();
+
     //the game will start at 60 seconds
     var number = 60;
     var intervalID;
@@ -9,6 +15,8 @@ $(document).ready(function () {
 
     //Functions
     function showResults() {
+        $('.countdown').show();
+        $('.quest').show();
         $('.get-answers').show();
         $('display-results').show();
     }
@@ -16,7 +24,7 @@ $(document).ready(function () {
     function countdownTimer() {
         intervalId = setInterval(decrement, 1000);
     }
-    $('.form-check-input').on('click', function(){
+    $('.form-check-input').on('click', function () {
         console.log($(this))
     })
     //Decrement function 
@@ -44,7 +52,7 @@ $(document).ready(function () {
         $('.game-answers').on('click', function () {
             displaySummary();
         });
-       
+
 
         $('input[type=radio]').on('change', function () {
             console.log("You won!")
