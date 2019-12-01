@@ -6,6 +6,9 @@ $(document).ready(function () {
     $('.quest').hide();
     $('.display-results').hide();
     $('#timer').hide();
+    $('.get-answers').hide();
+    $('.game-questions').hide();
+    $('.questions').hide();
 
     //the game will start at 60 seconds
     var number = 60;
@@ -15,11 +18,11 @@ $(document).ready(function () {
     var unanswered = 0;
 
     //Functions
-    function showResults() {
+    function startGame() {
         $('.countdown').show();
         $('.quest').show();
-        $('.get-answers').show();
-        $('display-results').show();
+        // $('.get-answers').show();
+        // $('display-results').show();
     }
 
     function countdownTimer() {
