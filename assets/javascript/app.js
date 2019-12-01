@@ -18,11 +18,13 @@ $(document).ready(function () {
     var unanswered = 0;
 
     //Functions
-    function startGame() {
-        $('.countdown').show();
+    function showGame() {
+        $('#countdown').show();
         $('.quest').show();
-        // $('.get-answers').show();
-        // $('display-results').show();
+        $('#timer').hide();
+        $('.get-answers').hide();
+        $('.game-questions').hide();
+        $('.questions').hide();
     }
 
     function countdownTimer() {
@@ -34,35 +36,59 @@ $(document).ready(function () {
     //Decrement function 
     function decrement() {
         number--;
-        $('#timer').html('<span>' + number + '</span>');
+        $('#timer').html(" " + number + " " + "seconds");
         if (number === 1) {
-            ('#timer').html('<span>' + number + '</span>');
+            ('#timer').html(" " + number + " " + "second");
         }
         else if (number === 0) {
             stop();
             hide();
-            displaySummary();
+            displayResults();
         }
 
-        //Function to hide questions and timer, after questions are answered. 
+        // Clear timer
+
+        function stop() {
+            clearInterval(intervalID);
+        }
+
+        //Function to hide the questions and timer, after questions are answered. 
         function hide() {
             ('#countdown').hide();
             ('.questions').hide();
             ('#get-answers').hide();
         }
 
-        // When the player clicks the shubmit button, it activates the on click function. 
+        // Function to display the results of the game
+        function displayResults() {
+            $('.display-results').show();
+            unanswered = (5 - (correctCount + wrongCount));
+            $('#correct-score').text("Correct Answers:" + " " + correctCount);
+            $('#wrong-score').text("Wrong Answers:" + " " + wrongCount);
+            $('unanswered').text("Unanswered:" + " " + unaswered);
+        }
+        // On Click events
 
-        $('.game-answers').on('click', function () {
-            displaySummary();
+        // Start Button on click 
+        $('#start-game').on('click', function () {
+            $('.quest').show();
+            showGame();
+            countdownTimer();
         });
 
+        // Done Button
+        $('.get-answers').on('click', function () {
+            $('#start-game').hide();
+            hide();
+            displayResults();
+
+        });
 
         $('input[type=radio]').on('change', function () {
             console.log("You won!")
             correctCount = $('input[value=correct]:checked').length;
             wrongCount = $('input[value=wrong]:checked').length;
-            unanswered = (8 - (correctCount + wrongCount));
+            unanswered = (5 - (correctCount + wrongCount));
         })
     };
 })

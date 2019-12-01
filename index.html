@@ -13,18 +13,12 @@
 </head>
 
 <body>
-    <!-- <div class="jumbotron">
-                <h1 class="display-4">Trival Trivia Game </h1>
-                <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
-                <hr class="my-4">
-                <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-                <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
-              </div> -->
     <div class="text-box">
         <main>
             <h1 class="game">
                 Totally Trival Trivia
             </h1>
+            <button id="start-game">Start</button>
             <p id="countdown">Time Remaining:
                 <span id="timer">0</span>
             </p>
@@ -125,13 +119,13 @@
         <p class="summary">
             Finished!
         </p>
-        <p class="correct-answers">
+        <p class="correct-answers" id="correct-score">
             Correct Answers:
         </p>
-        <p class="wrong-answers">
+        <p class="wrong-answers" id="wrong-score">
             Wrong:
         </p>
-        <p class="not-answered">
+        <p class="not-answered" id="unanswered">
             Unanswered:
         </p>
     </div>
@@ -139,4 +133,5 @@
     <script src="./assets/javascript/app.js" type="text/javascript">
     </script>
 </body>
+
 </html>
