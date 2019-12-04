@@ -3,13 +3,8 @@ $(document).ready(function () {
     // when the game starts: questions, the timer, and answers are hidden
     $('.display-results').hide();
     $('#timer').hide();
-    $('.get-answers').hide();
-
-    //  Once the player clicks start: the countdown and questions are shown 
-    $('#countdown').show();
-    $('.quest').show();
-    $('.game-questions').show();
-    $('.questions').show();
+    // $('.get-answers').hide();
+    $('.questions').hide();
 
     //the game will start at 60 seconds
     var number = 60;
@@ -22,6 +17,8 @@ $(document).ready(function () {
     function showGame() {
         $('#countdown').show();
         $('.quest').show();
+        $('.game-questions').show();
+        $('.questions').show();
         // $('.get-answers').hide();
         // $('.game-questions').hide();
         // $('.questions').hide();
