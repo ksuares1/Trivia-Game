@@ -6,8 +6,9 @@ $('#start-game').on('click', function () {
     countdownTimer();
 });
 
-// Certain features of the game will remain hidden until the game starts such as: questions,
+// Certain features of the game will remain hidden until the game starts such as: questions, answers, and the submit button.
 $('.display-results').hide();
+$('.quest').hide();
 $('.questions').hide();
 $('.get-answers').hide();
 
