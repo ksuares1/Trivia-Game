@@ -6,10 +6,10 @@ $('#start-game').on('click', function () {
     countdownTimer();
 });
 
-// when the game starts: questions, the timer, and answers are hidden
+// Certain features of the game will remain hidden until the game starts such as: questions,
 $('.display-results').hide();
-
 $('.questions').hide();
+$('.get-answers').hide();
 
 //the game will start at 60 seconds
 var number = 60;
@@ -56,7 +56,7 @@ function decrement() {
     function hide() {
         ('#countdown').hide();
         ('.questions').hide();
-        // ('#get-answers').hide();
+        
     }
 
     // Done Button
