@@ -61,19 +61,21 @@ function decrement() {
     }
 
     // Done Button
-    $('#get-answers').on('click', function () {
-        $('#get-answers').show();
+    $('.get-answers').on('click', function () {
+        console.log("finish");
+        // $('.').show();
         displayResults();
 
     });
 
     // Function to display the results of the game
     function displayResults() {
+        console.log("new page");
         $('.display-results').show();
         unanswered = (5 - (correctCount + wrongCount));
         $('#correct-score').text("Correct Answers:" + " " + correctCount);
         $('#wrong-score').text("Wrong Answers:" + " " + wrongCount);
-        $('unanswered').text("Unanswered:" + " " + unaswered);
+        $('#unanswered').text("Unanswered:" + " " + unanswered);
     }
 
 
