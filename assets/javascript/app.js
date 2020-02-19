@@ -39,7 +39,7 @@ function decrement() {
     number--;
     $('#timer').html(" " + number + " " + "seconds");
     if (number === 1) {
-        ('#timer').html(" " + number + " " + "second");
+        // ('#timer').html(" " + number + " " + "second");
     }
     else if (number === 0) {
         stop();
@@ -55,15 +55,14 @@ function decrement() {
 
     //Function to hide the questions and timer, after questions are answered. 
     function hide() {
-        ('#countdown').hide();
-        ('.questions').hide();
+        $('#countdown').hide();
+        $('.questions').hide();
         
     }
 
     // Done Button
     $('.get-answers').on('click', function () {
         console.log("finish");
-        // $('.').show();
         displayResults();
 
     });
@@ -80,7 +79,7 @@ function decrement() {
 
 
 
-    $('input[type=radio]').on('change', function () {
+    $('input[type=radio]').on('click', function () {
         console.log("You won!")
         correctCount = $('input[value=correct]:checked').length;
         wrongCount = $('input[value=wrong]:checked').length;
