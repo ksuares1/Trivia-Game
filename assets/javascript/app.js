@@ -23,7 +23,11 @@ var unanswered = 0;
 function showGame() {
     $('#countdown').show();
     $('.quest').show();
-    $('.game-questions').show();
+    $('.game-questions-1').show();
+    $('.game-questions-2').show();
+    $('.game-questions-3').show();
+    $('.game-questions-4').show();
+    $('.game-questions-5').show();
     $('.questions').show();
     $('.get-answers').show();
 }
@@ -79,8 +83,9 @@ function decrement() {
 
 
 
-    $('input[type=radio]').on('click', function () {
+    $('input[type=radio]').on('change', function () {
         console.log("You won!")
+        console.log($('input[type=radio]:checked').length)
         correctCount = $('input[value=correct]:checked').length;
         wrongCount = $('input[value=wrong]:checked').length;
         unanswered = (5 - (correctCount + wrongCount));
