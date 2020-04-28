@@ -10,4 +10,7 @@ This is Us Trivia Game is a timed question game based on the hit NBC series. Onc
 - JavaScript
 
 - Jquery
+
+## Clone
+Clone this repository with 
         
