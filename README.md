@@ -12,5 +12,5 @@ This is Us Trivia Game is a timed question game based on the hit NBC series. Onc
 - Jquery
 
 ## Clone
-Clone this repository with 
+Clone this repository with https://github.com/ksuares1/Trivia-Game.git
         
