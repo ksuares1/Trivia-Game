@@ -3,7 +3,6 @@
 This is Us Trivia Game is a timed question game based on the hit NBC series. Once the player selects start, they are only allowed to select one answer for each question until time runs out. After submitting their answers, JavaScript and Jquery is implemented to calculate players answers. 
 
 ## Getting Started
-![Screenshot (174)](https://user-images.githubusercontent.com/44280043/81520253-ca8a2680-9311-11ea-957e-cc5f11ad2346.png)
 
 ![Screenshot (175)](https://user-images.githubusercontent.com/44280043/81520306-eb527c00-9311-11ea-8c82-fb28948ccd9a.png)
 
