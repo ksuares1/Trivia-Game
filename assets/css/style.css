@@ -1,7 +1,8 @@
 body{
     background-image: url("../images/this-is-us.jpg");
     /* height:100%; */
-
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .game{ 
